@@ -1,17 +1,57 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import CommentDetail from './CommentDetail';
+import ApprobalCard from './ApprobalCard';
+import faker from 'faker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+    return (
+        <div className='ui container comments'>
+            <ApprobalCard>
+                <CommentDetail 
+                author="Sam" 
+                image={faker.image.people()} 
+                date="Today at 2:00" 
+                text="Meal with the jhonsons" />  
+                <div>
+                    <h4>Go for it!</h4>
+                    Excelence is always achived with consistency
+                </div>
+            </ApprobalCard>
+            <ApprobalCard>
+                <CommentDetail 
+                author="Sam" 
+                image={faker.image.people()} 
+                date="Today at 2:00" 
+                text="Meal with the jhonsons" />            
+            </ApprobalCard>
+            
+            <ApprobalCard>
+                <CommentDetail 
+                author="Alex" image={faker.image.people()}
+                date="Tomorrow at 7:00AM"
+                text="Breakfast at Dennys" />            
+            </ApprobalCard>
+            
+            <ApprobalCard>
+                <CommentDetail
+                author="Clarisse"
+                image={faker.image.people()}
+                date="Friday 22nd at 10:00PM"
+                text="Matrix Resurections" />            
+            </ApprobalCard>
+            
+            <ApprobalCard>
+                <CommentDetail
+                author="Jane"
+                image={faker.image.people()}
+                date="Friday 22nd at 10:00PM"
+                text={faker.lorem.sentence(4,2)} />            
+            </ApprobalCard>
+            
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        </div>
+    );
+};
+
+ReactDOM.render(<App />, document.querySelector('#root'));
