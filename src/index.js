@@ -8,11 +8,12 @@ const App = () => {
     return (
         <div className='ui container comments'>
             <ApprobalCard>
+                {/*
                 <CommentDetail 
                 author="Sam" 
-                image={faker.image.people()} 
+                image={faker.image.image()} 
                 date="Today at 2:00" 
-                text="Meal with the jhonsons" />  
+                text="Meal with the jhonsons" />*/}
                 <div>
                     <h4>Go for it!</h4>
                     Excelence is always achived with consistency
@@ -21,14 +22,14 @@ const App = () => {
             <ApprobalCard>
                 <CommentDetail 
                 author="Sam" 
-                image={faker.image.people()} 
+                image={faker.image.image()} 
                 date="Today at 2:00" 
                 text="Meal with the jhonsons" />            
             </ApprobalCard>
             
             <ApprobalCard>
                 <CommentDetail 
-                author="Alex" image={faker.image.people()}
+                author="Alex" image={faker.image.image()}
                 date="Tomorrow at 7:00AM"
                 text="Breakfast at Dennys" />            
             </ApprobalCard>
@@ -36,7 +37,7 @@ const App = () => {
             <ApprobalCard>
                 <CommentDetail
                 author="Clarisse"
-                image={faker.image.people()}
+                image={faker.image.image()}
                 date="Friday 22nd at 10:00PM"
                 text="Matrix Resurections" />            
             </ApprobalCard>
@@ -44,11 +45,18 @@ const App = () => {
             <ApprobalCard>
                 <CommentDetail
                 author="Jane"
-                image={faker.image.people()}
+                image={faker.image.image()}
                 date="Friday 22nd at 10:00PM"
                 text={faker.lorem.sentence(4,2)} />            
             </ApprobalCard>
-            
+
+            <ApprobalCard>
+                <CommentDetail
+                author="Josh"
+                image={faker.image.image()}
+                date="Friday 30th at 8:00PM"
+                text={faker.lorem.sentence(4,2)} />            
+            </ApprobalCard>
 
         </div>
     );
